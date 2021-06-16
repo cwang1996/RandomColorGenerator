@@ -1,0 +1,29 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1 {
+    font-family: Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+button {
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: #F0F0F0;
+}
+
