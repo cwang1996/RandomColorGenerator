@@ -9,14 +9,28 @@
 </head>
 <body>
     <div class="container">
-    <h1>Click on the button to get a random color!</h1>
-    <button type="button" onclick ="myFunction()">Try it out</button>
+        <h2 id="colorname"></h2>
+        <h1>Click on the button to get a random color!</h1>
+        <button id='colorchange' type="button">Try it out</button>
     </div>
 
     <script>
-        function myFunction() {
-            document.body.style.backgroundColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+        const colorchange_button = document.getElementById('colorchange');
+        const colorname_h2 = document.getElementById('colorname');
+
+        function myFunction (){
+            colorchange_button.addEventListener('click', function(){
+                document.body.style.backgroundColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+                myColor();
+            });
         }
+
+        function myColor(){
+            colorname_h2.innerHTML = `<h2 style='visibility:visible';>Background Color: ${document.body.style.backgroundColor}</h2>`;
+        }
+
+        myFunction();
+
     </script>
 </body>
 </html>
